@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coding Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <h1 class="banner">Coding Quiz</h1>
+    <div class="highscore">View Highscores</div>
+    <h2>Time left:</h2>
+    <h2 class="timer"></h2>
+    <p id="countdown"></p>
+
+    <div class="question">
+        Welcome to the coding quiz! You will have 2 minutes to complete the quiz.
+        Keep in mind that each incorrect answer will take 10 seconds off the timer.
+        The quiz will end once you have either answered all the questions or the timer runs out.
+        <div class="button"><button type="button">Start Quiz</button></div>
+    </div>
+
+    <div class="quiz-questions hide" id="quiz-questions"> 
+        <h3 id ="show-questions"> </h3>
+        <button type="button" id = "button1">a</button>
+        <button type="button" id="button2">b</button>
+        <button type="button" id="button3">c</button>
+    </div>
+    <div class="initials hide">
+        <input type="text">
+        <button>"Submit"</button>
+    </div>
+
+    <div class="scores hide">
+        <button>"Go Back"</button>
+        <button>"Clear Highscores"</button>
+    </div>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

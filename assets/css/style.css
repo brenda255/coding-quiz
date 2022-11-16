@@ -1,0 +1,78 @@
+body {
+    background-color: rgba(183, 224, 233, 0.877);
+    font-family: Georgia, serif;
+}
+
+h1 {
+    font-size: 50px;
+    text-align:left;
+}
+h2 {
+    font-size: 40px;
+    text-align: center;
+}
+.highscore {
+   text-align: right;
+   padding: 0 20px 0 10px;
+}
+.highscore:hover {
+    color: darkviolet;
+}
+#countdown {
+    display: flex;
+    justify-content: center;
+}
+
+.question {
+    text-align: center;
+    border: 2px solid black;
+    background-color: white;
+    padding: 10px;
+}
+.hide {
+    display: none;
+}
+
+p {
+    background-color: white;
+    display: inline-flex;
+    font-size: 70px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+
+}
+
+button {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 150px;
+    color: white;
+    background-color: rgb(136, 25, 136);
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.highbutton {
+    font-size: 14px;
+    margin-top: 2px;
+    margin-left: 0;
+}
+
+textarea {
+    height: 30px;
+    margin-top: 10px;
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cw {
+    font-size: 32px;
+}
