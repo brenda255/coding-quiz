@@ -12,7 +12,10 @@ var button1El = document.querySelector("#button1");
 var button2El = document.querySelector("#button2");
 var button3El = document.querySelector("#button3");
 var index = 0;
-var quizQuestions = [
+var initialsEl = document.querySelector(".initials")
+var highscoresEl = document.querySelector(".highscores")
+var remainingTime;
+var quizQuestionsEl = [
     {
         question:"Which is a string?", 
         answerOne: "true",
@@ -40,7 +43,7 @@ var quizQuestions = [
     }
 ]
 
-
+//moves from question to question
 button.addEventListener("click", () => {
     setTime();
 question.style.display = "none";
@@ -48,15 +51,18 @@ questionsEl.classList.remove("hide")
 displayQuestions()
 })
 
+//displaying our quiz questions
 function displayQuestions () {
-showQuestionsEl.textContent = quizQuestions[index].question
-button1El.textContent = quizQuestions[index].answerOne
-button2El.textContent = quizQuestions[index].answerTwo
-button3El.textContent = quizQuestions[index].answerThree
+showQuestionsEl.textContent = quizQuestionsEl[index].question
+button1El.textContent = quizQuestionsEl[index].answerOne
+button2El.textContent = quizQuestionsEl[index].answerTwo
+button3El.textContent = quizQuestionsEl[index].answerThree
 
 }
+//alerting user if question was correct or incorrect
 function nextQuestion () {
-    if (quizQuestions[index].correctAnswer===this.textContent){
+  
+    if (quizQuestionsEl[index].correctAnswer===this.textContent){
         alert("correct")
     }
     else{
@@ -65,7 +71,15 @@ function nextQuestion () {
     }
 index++
 displayQuestions();
+
+if (quizQuestionsEl[index]=== quizQuestionsEl[3]) {
+    clearInterval(timerInterval);
+    initialsEl.classList.remove("hide")
+       }
+
 }
+
+
 button1El.addEventListener ("click", nextQuestion)
 button2El.addEventListener ("click", nextQuestion)
 button3El.addEventListener ("click", nextQuestion)
@@ -81,6 +95,8 @@ function setTime() {
     }, 1000);
 }
 
+
+//letting the user know the time is up
 function sendMessage() {
     timerEl.textContent = "Your time is up!";
 }

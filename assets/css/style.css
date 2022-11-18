@@ -57,22 +57,3 @@ button {
     margin-right: 5px;
     margin-left: 5px;
 }
-
-
-.highbutton {
-    font-size: 14px;
-    margin-top: 2px;
-    margin-left: 0;
-}
-
-textarea {
-    height: 30px;
-    margin-top: 10px;
-    resize: none;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cw {
-    font-size: 32px;
-}
